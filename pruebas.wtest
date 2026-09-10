@@ -1,38 +1,33 @@
-import example.* 
+import example.*
 
 describe "Casos de prueba del rendimiento y velocidad de tito " {
-
-
-// consumir terere
-test "tito consume 10cc (centimetros cubicos) de tetere y su velocidad es 7" {
-
-// terere : (0.1 *10).max(1)=1
-// velocidad (la cantidad que consume) mas 490 dividiendo su peso = (1 * 490) / 70 = 7
-tito.consumir(10,terere)
-assert.equals(7, tito.velocidad())
-}
-
-// consumir whisky
-test "tito consume 2 cc de whisky" {
-
-
-// whisky: 0.9 ** 2 = 0.81
-// velocidad (0.81 *490)/ 70 = 5.67
-
-tito.consumir(2,whisky)
-assert.equals(5.67, tito.velocidad())
-}
-
-
-// consumir cianuro
-test "tito consume 5 cc de cianuro y su velocidad es 0 m/s" {
-
-
-// cianuro: 0
-// velocidad (0 *490)/70 = 0
-
-
-tito.consumir(5,cianuro)
-assert.equals(0, tito.velocidad())
-}
+  // consumir terere
+  test "tito consume 10cc (centimetros cubicos) de tetere y su velocidad es 7" {
+    // terere : (0.1 *10).max(1)=1
+    // velocidad (la cantidad que consume) mas 490 dividiendo su peso = (1 * 490) / 70 = 7
+    tito.consumir(10, terere)
+    assert.equals(7, tito.velocidad())
+  }
+  
+  // consumir whisky
+  test "tito consume 2 cc de whisky" {
+    // whisky: 0.9 ** 2 = 0.81
+    // velocidad (0.81 *490)/ 70 = 5.67
+    tito.consumir(2, whisky)
+    assert.equals(5.67, tito.velocidad())
+  }
+  
+  // consumir cianuro
+  test "tito consume 5 cc de cianuro y su velocidad es 0 m/s" {
+    // cianuro: 0
+    // velocidad (0 *490)/70 = 0
+    tito.consumir(5, cianuro)
+    assert.equals(0, tito.velocidad())
+  }
+  
+  // pepe
+  test "la velocidad de pepe si consume 10 de cianuro es: 66,15" {
+    pepe.consumir(10, cianuro)
+    assert.equals((10.8 * 490) / 80, pepe.velocidad())
+  }
 }
